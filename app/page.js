@@ -1,4 +1,3 @@
-  // COLE ISSO NO page.js
 'use client'; // Precisa porque usaremos useState/useEffect
 
 import { useState, useEffect } from 'react';
