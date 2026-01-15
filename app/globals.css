@@ -1,42 +1,65 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* COLE ISSO NO globals.css */
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #007bff;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.btn-cta, .btn-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+/* Seções claras/escuras alternadas */
+section:nth-child(odd) {
+  background-color: #fff;
+}
+
+body.dark section:nth-child(odd) {
+  background-color: #2d2d2d;
+}
+
+section:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+body.dark section:nth-child(even) {
+  background-color: #1a1a1a;
 }
