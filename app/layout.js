@@ -1,4 +1,3 @@
-// COLE ISSO NO layout.js
 import './globals.css'
 
 export const metadata = {
